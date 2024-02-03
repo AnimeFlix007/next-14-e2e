@@ -3,13 +3,6 @@ import React from "react";
 import SliderCSS from "@/app/css/testimonials.module.css";
 import { TestimonialsData } from "@/app/mock/Testimonials";
 
-interface ITestimonials {
-  title: string;
-  profile: string;
-  name: string;
-  designation: string;
-}
-
 const Testimonials = () => {
   return (
     <div className="bg-violet-500 mt-10 md:mt-20">

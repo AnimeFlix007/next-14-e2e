@@ -4,14 +4,6 @@ import { ButtonOne, ButtonTwo } from "../common/Button";
 import Image from "next/image";
 import { ServicesData } from "@/app/mock/Services";
 
-interface IServices {
-  heading: string;
-  subtitles: string[];
-  image: string;
-  button: string;
-  color?: string;
-}
-
 export default function Services() {
   return (
     <div className="container px-4 md:px-24">
