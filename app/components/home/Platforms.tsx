@@ -12,6 +12,7 @@ const Platform = () => {
           alt="star-image"
           width={300}
           height={300}
+          loading="lazy"
         />
         <div className="container mx-auto flex items-center justify-center flex-col px-4 md:px-16">
           <div className="text-center w-full">
@@ -48,6 +49,7 @@ const Platform = () => {
           alt="star-image"
           width={300}
           height={300}
+          loading="lazy"
         />
       </section>
     </div>

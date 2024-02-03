@@ -15,7 +15,7 @@ const Customers = () => {
           <div className="slide-track">
             {[...customerImages, ...customerImages].map((company, index) => (
               <div key={index} className="slide px-4">
-                <Image width={200} height={200} src={company} alt={company} />
+                <Image width={200} height={200} src={company} alt={company} loading="lazy" />
               </div>
             ))}
           </div>

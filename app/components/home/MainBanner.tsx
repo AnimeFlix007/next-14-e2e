@@ -30,6 +30,7 @@ const MainBanner = () => {
             alt="Banner"
             width={300}
             height={300}
+            loading="lazy"
           />
         </div>
       </div>
