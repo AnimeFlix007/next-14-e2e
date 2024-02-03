@@ -3,12 +3,12 @@ import Image from "next/image";
 
 const Customers = () => {
   return (
-    <div className="mt-20 mb-20">
+    <div className="my-10 px-6">
       <div
-        className="container items-center justify-center mx-auto p-12"
+        className="container items-center justify-center mx-auto"
         data-aos="fade-up"
       >
-        <h2 className="text-center text-3xl md:text-4xl font-bold text-black">
+        <h2 className="text-center text-3xl md:text-4xl font-extrabold text-black">
           Customers that use us
         </h2>
         <div className="slider">

@@ -3,7 +3,7 @@ import { ButtonTwo } from "../common/Button";
 
 const Platform = () => {
   return (
-    <div className="mt-10 mb-20">
+    <div className="my-10">
       <section>
         <Image
           className="h-28 w-28 float-left"
@@ -13,16 +13,16 @@ const Platform = () => {
           width={300}
           height={300}
         />
-        <div className="container mx-auto flex px-5 items-center justify-center flex-col">
-          <div className="text-center lg:w-2/3 w-full">
-            <h4 className="text-4xl font-bold text-black" data-aos="fade-up">
+        <div className="container mx-auto flex items-center justify-center flex-col px-4 md:px-16">
+          <div className="text-center w-full">
+            <h4 className="text-3xl md:text-4xl font-extrabold text-black" data-aos="fade-up">
               Why{" "}
-              <span className="bg-gray-200 rounded-full px-6 py-2">
+              <span className="bg-gray-200 rounded-full px-3 py-2">
                 Footprynt.ai
               </span>
             </h4>
             <p
-              className="mb-8 mt-8 leading-relaxed text-xl text-gray-500 font-serif"
+              className="my-8 leading-relaxed text-2xl text-gray-800 font-medium"
               data-aos="fade-up"
             >
               {" "}
