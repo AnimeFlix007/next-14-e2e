@@ -18,6 +18,7 @@ import { ButtonOne, ButtonTwo } from "./Button";
 // import youtube from "../../asset/images";
 import Link from "next/link";
 import Image from "next/image";
+import LanguageSwitch from "@/app/components/common/LanguageSwitch";
 
 function classNames(...classes) {
   return classes.filter(Boolean).join(" ");
@@ -26,25 +27,6 @@ function classNames(...classes) {
 export default function Navbar() {
   const [open, setOpen] = useState(false);
   const [openSubMenu, setOpenSubMenu] = useState(null);
-  const [selectedCountry, setSelectedCountry] = useState("");
-
-  useEffect(() => {
-    const storedCountry = localStorage.getItem("selectedCountry");
-    if (storedCountry) {
-      setSelectedCountry(storedCountry);
-    }
-  }, []);
-
-  //   const handleCountryChange = (event) => {
-  //     const newCountry = event.target.value;
-  //     setSelectedCountry(newCountry);
-
-  //     localStorage.setItem("selectedCountry", newCountry);
-
-  //     const currentPath = window.location.pathname;
-  //     window.history.pushState(null, "", `${currentPath}?country=${newCountry}`);
-  //     window.location.reload();
-  //   };
 
   const handleSubMenuToggle = (index) => {
     setOpenSubMenu(openSubMenu === index ? null : index);
@@ -157,7 +139,7 @@ export default function Navbar() {
   ];
 
   const pages = [
-    { name: "Pricing", href: `/pricing?country=${selectedCountry}` },
+    { name: "Pricing", href: `/pricing` },
     { name: "ContactUs", href: "/contact-us" },
   ];
 
@@ -466,9 +448,7 @@ export default function Navbar() {
                                             )}
                                             {category.id === "influencer" && (
                                               <Link
-                                                href={`${
-                                                  item.href || "/"
-                                                }?country=${selectedCountry}`}
+                                                href={`${item.href || "/"}`}
                                                 className={`relative z-10 inline-flex items-center justify-center w-full px-6 py-2 text-lg text-black font-semibold transition-all duration-200 ${item.bg} border-2 border-black sm:w-auto rounded-xl font-pj hover:bg-white focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-900 shadow-[1px_1px_10px_4px_#e2e8f0]`}
                                                 role="button"
                                               >
@@ -516,10 +496,14 @@ export default function Navbar() {
                   </div>
 
                   <div className="hidden lg:ml-8 lg:flex">
-                    {/* <CountryDropdown
-                  selectedCountry={selectedCountry}
-                  handleCountryChange={handleCountryChange}
-                /> */}
+                    <LanguageSwitch
+                      languages={[
+                        { value: "IN", label: "India" },
+                        { value: "US", label: "USA" },
+                        { value: "AE", label: "UAE" },
+                        { value: "GB", label: "United Kingdom" },
+                      ]}
+                    />
                   </div>
                 </div>
               </div>
