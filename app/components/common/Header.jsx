@@ -163,7 +163,7 @@ export default function Navbar() {
   const submenu3 = [
     {
       name: "Email Signature Generator",
-      href: "/free-influencer-outreach-email-ai-generator/",
+      href: "/email-generator/",
     },
     {
       name: "SEO Ranking Checker",

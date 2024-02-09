@@ -1,5 +1,6 @@
 import { ButtonOne, ButtonTwo } from "@/app/components/common/Button";
-import Image from 'next/image'
+import Image from "next/image";
+import Link from "next/link";
 
 const MainBanner = () => {
   return (
@@ -19,7 +20,12 @@ const MainBanner = () => {
             returns on money spent
           </p>
           <div className="flex flex-wrap items-center mt-6 lg:mt-10 gap-6">
-            <ButtonOne title={"CONTACT US"} url={"/contact-us"} />
+            <Link
+              href={"/contact-us"}
+              className="relative z-10 inline-flex items-center justify-center w-full px-6 py-2 text-lg text-white font-bold transition-all duration-200 bg-rose-500 border-2 border-black sm:w-auto rounded-xl font-pj hover:bg-white hover:text-red-400 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-900 shadow-[1px_1px_10px_4px_#e2e8f0]"
+            >
+              CONTACT US
+            </Link>
             <ButtonTwo title={"KNOW MORE"} url={"http://app.footprynt.ai/"} />
           </div>
         </div>
