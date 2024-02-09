@@ -2,7 +2,8 @@ import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
 import ClientOnly from "../client/ClientOnly";
-import Header from "@/app/components/common/Header"
+import Header from "@/app/components/common/Header";
+import ProgressBar from "../providers/ProgressBar";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -18,7 +19,13 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={inter.className}><ClientOnly><Header /></ClientOnly>{children}</body>
+      <body className={inter.className}>
+        <ClientOnly>
+          <Header />
+        </ClientOnly>
+        <ProgressBar />
+        {children}
+      </body>
     </html>
   );
 }
