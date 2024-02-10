@@ -4,6 +4,8 @@ import "./globals.css";
 import ClientOnly from "../client/ClientOnly";
 import Header from "@/app/components/common/Header";
 import ProgressBar from "../providers/ProgressBar";
+import ChatbotMain from "@/app/components/chatbot"
+import Footer from "../components/common/Footer";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -22,9 +24,11 @@ export default function RootLayout({
       <body className={inter.className}>
         <ClientOnly>
           <Header />
+          <ChatbotMain />
         </ClientOnly>
         <ProgressBar />
         {children}
+        <Footer />
       </body>
     </html>
   );

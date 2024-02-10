@@ -21,6 +21,6 @@
       "@/*": ["./*"]
     }
   },
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts", "app/components/common/Header.jsx"],
+  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts", "app/components/common/Header.jsx", "app/components/chatbot/index.jsx", "app/components/chatbot/Chatbot/config.js"],
   "exclude": ["node_modules"]
 }

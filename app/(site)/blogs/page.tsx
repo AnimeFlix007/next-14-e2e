@@ -16,7 +16,7 @@ export default function page({}: Props) {
       <FAQ />
       <br />
       <br />
-      <Footer />
+
     </>
   );
 }

@@ -60,7 +60,7 @@ export default function CaseStudies({}: Props) {
           ))}
         </div>
       </div>
-      <Footer />
+
     </>
   );
 }
