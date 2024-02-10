@@ -5,4 +5,4 @@ export const eslint = {
 };
 export const images = { unoptimized: true };
 
-export const distDir = "build";
+export const output = 'export';
