@@ -1,6 +1,19 @@
-// const { i18n } = require('./next-i18next.config')
-export const trailingSlash = true;
-export const eslint = {
-    ignoreDuringBuilds: true,
+/** @type {import('next').NextConfig} */
+const nextConfig = {
+  reactStrictMode: true,
+  output: "export",
+  images: {
+    remotePatterns: [
+      {
+        protocol: "https",
+        hostname: "**",
+      },
+      {
+        protocol: "http",
+        hostname: "**",
+      },
+    ],
+  },
 };
-export const images = { unoptimized: true };
+
+module.exports = nextConfig;
