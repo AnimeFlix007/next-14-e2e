@@ -41,7 +41,7 @@ const FreeInfluencerOutrichForm = () => {
     <>
       <div>
         <div className="bg-gray-100 p-4">
-          <h2 className="p-4 text-2xl text-center text-rose-500 font-bold">
+          <h2 className="p-4 text-2xl text-center text-[#ff2d55] font-bold">
             Create your free email signature
           </h2>
           <div className="container md:flex gap-10">
@@ -212,7 +212,7 @@ const FreeInfluencerOutrichForm = () => {
 
               <button
                 onClick={handleCreateSignature}
-                className="relative z-10 inline-flex mt-5 items-center justify-center w-full px-6 py-2 text-lg text-white font-bold transition-all duration-200 bg-teal-500 border-2 border-black sm:w-auto rounded-xl font-pj hover:bg-white hover:text-teal-500 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-900 shadow-[1px_1px_10px_4px_#e2e8f0]"
+                className="relative z-10 inline-flex mt-5 items-center justify-center w-full px-6 py-2 text-lg text-white font-bold transition-all duration-200 bg-[#1d42d9] border-2 border-black sm:w-auto rounded-xl font-pj hover:bg-white hover:text-[#1d42d9] focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-900 shadow-[1px_1px_10px_4px_#e2e8f0]"
               >
                 Create Signature
               </button>

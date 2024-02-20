@@ -10,7 +10,7 @@ export default function page({}: Props) {
   return (
     <>
       <div className="sm:flex sm:flex-col sm:align-center p-10">
-        <div className="text-center bg-rose-500 border border-black rounded-lg p-4">
+        <div className="text-center bg-[#ff2d55] border border-black rounded-lg p-4">
           <h2 className="text-2xl leading-6 font-bold text-white">
             SAVE UP TO 25% WITH YEARLY PLANS
           </h2>

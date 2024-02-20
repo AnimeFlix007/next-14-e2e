@@ -27,7 +27,7 @@ const Banner = ({ bannerTitle, subtitles, Bannerimage } : IProps) => {
             <ButtonOne title={"START FREE TRIAL"} url={"http://app.footprynt.in/"}/>
             <a
               href="/contact-us"
-              className="px-4 font-extrabold text-rose-500 cursor-pointer mt-4 md:mt-0"
+              className="px-4 font-extrabold text-[#ff2d55] cursor-pointer mt-4 md:mt-0"
             >
               SCHEDULE A DEMO MEETING
             </a>

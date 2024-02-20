@@ -88,7 +88,7 @@ export default function Footer() {
           <div className="flex flex-col w-full md:w-1/2 md:p-0 py-4 gap-8 md:gap-0 md:justify-between">
             <Link href="/">
               <Image
-                src={"/common/logo.png"}
+                src={"/FootpryntLogo.png"}
                 alt="footer_logo"
                 className="w-[10rem] md:w-[18rem] mx-auto md:mx-0"
                 width={200}
@@ -122,14 +122,14 @@ export default function Footer() {
             <p className="text-[18px] md:text-[22px] font-bold footer-main">
               Our Platforms
             </p>
-            <span className="top-[18px] md:top-[33px] absolute w-[7rem] h-[3px] bg-teal-500 md:bg-transparent"></span>
+            <span className="top-[18px] md:top-[33px] absolute w-[7rem] h-[3px] bg-[#1d42d9] md:bg-transparent"></span>
             {quicklinks.map((links, i) => (
               <div className="flex gap-4" key={i}>
-                <p className="text-rose-500">{links.icon}</p>
+                <p className="text-[#ff2d55]">{links.icon}</p>
                 <a
                   href={links.href}
                   key={i}
-                  className="text-[14px] md:text-[16px] hover:text-teal-500 cursor-pointer text-[#646464] font-medium hover:font-bold"
+                  className="text-[14px] md:text-[16px] hover:text-[#1d42d9] cursor-pointer text-[#646464] font-medium hover:font-bold"
                 >
                   {links.name}
                 </a>
@@ -141,12 +141,12 @@ export default function Footer() {
             <p className="text-[18px] md:text-[22px] font-bold footer-main">
               Quick Links
             </p>
-            <span className="top-[18px] md:top-[33px] absolute w-[7rem] h-[3px] bg-rose-500 md:bg-transparent"></span>
+            <span className="top-[18px] md:top-[33px] absolute w-[7rem] h-[3px] bg-[#ff2d55] md:bg-transparent"></span>
             {platform.map((platform, i) => (
               <a
                 href={platform.href}
                 key={i}
-                className="text-[14px] md:text-[16px] hover:text-rose-500 cursor-pointer text-[#646464] font-medium hover:font-bold"
+                className="text-[14px] md:text-[16px] hover:text-[#ff2d55] cursor-pointer text-[#646464] font-medium hover:font-bold"
               >
                 {platform.name}
               </a>

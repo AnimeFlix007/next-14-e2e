@@ -51,7 +51,7 @@ export default function Blogs({}: Props) {
                   </p>
                   <a
                     href={`/blog-detail/${blog.id}`}
-                    className="text-rose-500 font-bold underline underline-offset-4 float-right"
+                    className="text-[#ff2d55] font-bold underline underline-offset-4 float-right"
                   >
                     Read more
                   </a>

@@ -46,7 +46,7 @@ const Plans = () => {
       >
         {filteredPlans && filteredPlans.map((plan) => (
           <div key={plan.plan} className="border border-slate-500 rounded-lg shadow-sm divide-y divide-slate-200">
-            <div className="bg-teal-500">
+            <div className="bg-[#1d42d9]">
               <div className="p-6">
                 <h2 className="text-2xl leading-6 font-extrabold text-white">
                   {plan.plan}
@@ -63,7 +63,7 @@ const Plans = () => {
                 </p>
                 <a
                   href="/sign-up"
-                  className="mt-8 block w-full bg-rose-500 rounded-md py-2 text-sm font-semibold text-white text-center hover:bg-white hover:text-rose-500"
+                  className="mt-8 block w-full bg-[#ff2d55] rounded-md py-2 text-sm font-semibold text-white text-center hover:bg-white hover:text-[#ff2d55]"
                 >
                   Join as a Starter
                 </a>
