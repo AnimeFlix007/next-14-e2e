@@ -31,18 +31,18 @@ const SeoRanking = () => {
     <>
       <div className="container flex flex-col items-center justify-center gap-4 py-10">
         <h1 className="text-4xl font-extrabold text-black text-center">
-          <span className="text-rose-500">Free</span> SSL Checker
+          <span className="text-[#ff2d55]">Free</span> SSL Checker
         </h1>
         <p className="text-gray-600 text-xl text-center">
           Use our fast SSL Checker to help you quickly diagnose problems with
           your SSL certificate installation. You can verify the SSL certificate
           on your web server to make sure it is correctly installed, valid,
-          trusted and doesn't give any errors to any of your users. To use the
-          SSL Checker, simply enter your server's public hostname (internal
-          hostnames aren't supported) in the box below and click the Check SSL
+          trusted and doesn&apos;t give any errors to any of your users. To use the
+          SSL Checker, simply enter your server&apos;s public hostname (internal
+          hostnames aren&apos;t supported) in the box below and click the Check SSL
           button.
         </p>
-        <div className="bg-rose-500 w-full mt-10 px-4 py-8 flex flex-col items-center justify-center">
+        <div className="bg-[#ff2d55] w-full mt-10 px-4 py-8 flex flex-col items-center justify-center">
           <h2 className="text-white font-bold text-xl text-center">
             Enter the URL you’d Like To Check SSL
           </h2>
@@ -76,7 +76,7 @@ const SeoRanking = () => {
                 <button
                   type="submit"
                   onClick={checkCertificate}
-                  className="bg-teal-600 h-10 text-white px-6 text-lg font-semibold rounded-md"
+                  className="bg-[#1d42d9]  h-10 text-white px-6 text-lg font-semibold rounded-md"
                 >
                   {loading ? (
                     <CircularProgress color="inherit" size={24} />

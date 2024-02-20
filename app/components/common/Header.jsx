@@ -308,7 +308,7 @@ export default function Navbar() {
                 </div>
 
                 <div className="space-y-6 border-t border-gray-200 px-4 py-6">
-                  <ButtonOne title={"SIGN UP"} />
+                  <ButtonTwo title={"SIGN UP"} />
                 </div>
               </Dialog.Panel>
             </Transition.Child>
@@ -338,7 +338,7 @@ export default function Navbar() {
                   <Link href="/">
                     <Image
                       className="h-8 w-auto"
-                      src={"/common/logo.png"}
+                      src={"/FootpryntLogo.png"}
                       alt="footprynt"
                       width={200}
                       height={100}
@@ -489,7 +489,7 @@ export default function Navbar() {
 
                 <div className="ml-auto flex items-center">
                   <div className="hidden lg:flex lg:flex-1 lg:items-center lg:justify-end lg:space-x-6">
-                    <ButtonOne
+                    <ButtonTwo
                       title={"SIGN UP"}
                       url={"https://pride.footprynt.in/login"}
                     />

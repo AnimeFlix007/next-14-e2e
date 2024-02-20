@@ -47,7 +47,7 @@ export default function CaseStudies({}: Props) {
                       {caseStudy.summary}
                     </p>
                     <a
-                      className="text-teal-500 font-bold underline underline-offset-4 float-right"
+                      className="text-[#1d42d9] font-bold underline underline-offset-4 float-right"
                       href={`/case-study/${caseStudy.id}`}
                     >
                       Read more
