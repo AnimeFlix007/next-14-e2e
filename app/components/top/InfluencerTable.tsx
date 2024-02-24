@@ -25,9 +25,15 @@ type Props = {
 export default function InfluencerTable({ filter }: Props) {
   const [data, setData] = useState<any>([]);
   const [loading, setLoading] = useState(false);
+  let country: any = "IN";
 
-  const params = new URLSearchParams(window.location.search);
-  const country = params.get("country") || JSON.parse(window.localStorage.getItem("FP_Language") || "")?.value || "IN";
+  if (typeof window !== "undefined") {
+    const params = new URLSearchParams(window.location.search);
+    country =
+      params.get("country") ||
+      JSON.parse(window.localStorage.getItem("FP_Language") || "")?.value ||
+      "IN";
+  }
 
   useEffect(() => {
     const fetchData = async () => {

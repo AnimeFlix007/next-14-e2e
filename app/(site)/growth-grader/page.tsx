@@ -1,4 +1,4 @@
-"use client"
+"use client";
 
 import React, { useState } from "react";
 import Box from "@mui/material/Box";
@@ -36,13 +36,17 @@ const GrowthGrader = () => {
   const isLastStep = activeStep === maxSteps - 1;
 
   const handleNext = () => {
-    window.scrollTo({ top: 0, behavior: "smooth" });
-    setActiveStep((prevActiveStep) => prevActiveStep + 1);
+    if (typeof window !== "undefined") {
+      window.scrollTo({ top: 0, behavior: "smooth" });
+      setActiveStep((prevActiveStep) => prevActiveStep + 1);
+    }
   };
 
   const handleBack = () => {
-    window.scrollTo({ top: 0, behavior: "smooth" });
-    setActiveStep((prevActiveStep) => prevActiveStep - 1);
+    if (typeof window !== "undefined") {
+      window.scrollTo({ top: 0, behavior: "smooth" });
+      setActiveStep((prevActiveStep) => prevActiveStep - 1);
+    }
   };
 
   const handleOpenModal = () => {
@@ -160,4 +164,4 @@ const GrowthGrader = () => {
   );
 };
 
-export default GrowthGrader
+export default GrowthGrader;

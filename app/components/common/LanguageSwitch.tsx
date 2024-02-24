@@ -107,15 +107,17 @@ export default function LanguageSwitch({ languages }: Props) {
                 <li
                   key={language.value}
                   onClick={() => {
-                    window.localStorage.setItem(
-                      "FP_Language",
-                      JSON.stringify(language)
-                    );
-                    setLanguage(language);
-                    setSelected(false);
-                    const host = window.location.href;
-                    const newHref = host?.split("?")?.[0];
-                    router.push(newHref + "?search=" + language.value);
+                    if (typeof window !== "undefined") {
+                      window.localStorage.setItem(
+                        "FP_Language",
+                        JSON.stringify(language)
+                      );
+                      setLanguage(language);
+                      setSelected(false);
+                      const host = window.location.href;
+                      const newHref = host?.split("?")?.[0];
+                      router.push(newHref + "?search=" + language.value);
+                    }
                   }}
                 >
                   <button
