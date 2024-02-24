@@ -27,7 +27,7 @@ export default function InfluencerTable({ filter }: Props) {
   const [loading, setLoading] = useState(false);
 
   const params = new URLSearchParams(window.location.search);
-  const country = params.get("country") || "IN";
+  const country = params.get("country") || JSON.parse(window.localStorage.getItem("FP_Language") || "")?.value || "IN";
 
   useEffect(() => {
     const fetchData = async () => {
@@ -46,7 +46,7 @@ export default function InfluencerTable({ filter }: Props) {
     };
 
     fetchData();
-  }, []);
+  }, [country, filter]);
 
   function formatNumberAbbreviated(num: any) {
     if (num >= 1e6) {

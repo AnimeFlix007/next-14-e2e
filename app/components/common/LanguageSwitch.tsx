@@ -1,6 +1,7 @@
 "use client";
 
 import Image from "next/image";
+import { useRouter } from "next/navigation";
 import { useEffect, useState } from "react";
 
 interface ILanguage {
@@ -15,6 +16,7 @@ type Props = {
 export default function LanguageSwitch({ languages }: Props) {
   const [selected, setSelected] = useState(false);
   const [language, setLanguage] = useState<ILanguage | null>(null);
+  const router = useRouter();
 
   useEffect(() => {
     if (typeof window !== "undefined") {
@@ -90,12 +92,12 @@ export default function LanguageSwitch({ languages }: Props) {
       </button>
       {selected && (
         <div
-          className=" w-[98vw] h-screen absolute top-0 left-0 "
+          className=" w-screen h-screen absolute top-0 right-0 "
           onClick={() => setSelected(false)}
         >
           <div
             id="dropdown-states"
-            className="absolute top-20 right-40 z-10 bg-white divide-y divide-gray-100 rounded-lg border-r-slate-800"
+            className="absolute top-20 right-4 z-10 bg-white divide-y divide-gray-100 rounded-lg border-r-slate-800"
           >
             <ul
               className="py-2 text-sm text-gray-700 border-r-slate-800"
@@ -111,6 +113,9 @@ export default function LanguageSwitch({ languages }: Props) {
                     );
                     setLanguage(language);
                     setSelected(false);
+                    const host = window.location.href;
+                    const newHref = host?.split("?")?.[0];
+                    router.push(newHref + "?search=" + language.value);
                   }}
                 >
                   <button

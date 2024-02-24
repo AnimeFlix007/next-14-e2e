@@ -3,7 +3,7 @@ export const PlansData = {
     {
       country: "AE",
       plan: "Monthly",
-      month: "$1541",
+      month: "1541 AED",
       desc: "Best for growing agencies and aspiring brands",
       include: [
         "100 Influencers",
@@ -15,7 +15,7 @@ export const PlansData = {
     {
       country: "AE",
       plan: "Quarterly",
-      month: "$3963",
+      month: "3963 AED",
       desc: "Best for established agencies and large brands",
       include: [
         "300 Influencers",
@@ -27,7 +27,7 @@ export const PlansData = {
     {
       country: "AE",
       plan: "Annually",
-      month: "$11009",
+      month: "11009 AED",
       desc: "Best for Enterprises and white-label platforms.",
       include: [
         "1200 Influencers",
@@ -64,6 +64,80 @@ export const PlansData = {
       country: "IN",
       plan: "Annually",
       month: "₹250000",
+      desc: "Best for Enterprises and white-label platforms.",
+      include: [
+        "1200 Influencers",
+        "365 Days Duration",
+        "50 Competitors",
+        "25 Campaigns",
+      ],
+    },
+
+    {
+      country: "US",
+      plan: "Monthly",
+      month: "332 USD",
+      desc: "Best for growing agencies and aspiring brands",
+      include: [
+        "100 Influencers",
+        "30 Days Duration",
+        "3 Competitors",
+        "1 Campaigns",
+      ],
+    },
+    {
+      country: "US",
+      plan: "Quarterly",
+      month: "855 USD",
+      desc: "Best for established agencies and large brands",
+      include: [
+        "300 Influencers",
+        "90 Days Duration",
+        "10 Competitors",
+        "5 Campaigns",
+      ],
+    },
+    {
+      country: "US",
+      plan: "Annually",
+      month: "2375 USD",
+      desc: "Best for Enterprises and white-label platforms.",
+      include: [
+        "1200 Influencers",
+        "365 Days Duration",
+        "50 Competitors",
+        "25 Campaigns",
+      ],
+    },
+
+    {
+      country: "GB",
+      plan: "Monthly",
+      month: "£ 332",
+      desc: "Best for growing agencies and aspiring brands",
+      include: [
+        "100 Influencers",
+        "30 Days Duration",
+        "3 Competitors",
+        "1 Campaigns",
+      ],
+    },
+    {
+      country: "GB",
+      plan: "Quarterly",
+      month: "£ 855",
+      desc: "Best for established agencies and large brands",
+      include: [
+        "300 Influencers",
+        "90 Days Duration",
+        "10 Competitors",
+        "5 Campaigns",
+      ],
+    },
+    {
+      country: "GB",
+      plan: "Annually",
+      month: "£ 2375",
       desc: "Best for Enterprises and white-label platforms.",
       include: [
         "1200 Influencers",

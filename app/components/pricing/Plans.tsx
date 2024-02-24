@@ -7,19 +7,12 @@ interface ILanguage {
   label: string;
 }
 const Plans = () => {
-  const [language, setLanguage] = useState<ILanguage | null>(null);
-  useEffect(() => {
-    if (typeof window !== "undefined") {
-      const item: any = window.localStorage.getItem("FP_Language");
-      if (item) {
-        setLanguage(JSON.parse(item));
-      }
-    }
-  }, []);
+  const params = new URLSearchParams(window.location.search);
+  const country = params.get("country") || JSON.parse(window.localStorage.getItem("FP_Language") || "")?.value || "IN";
   // Filter plans based on the selected country
   const filteredPlans =
-    language &&
-    PlansData.plans.filter((plan) => plan.country === language?.value);
+  country &&
+    PlansData.plans.filter((plan) => plan.country === country);
   return (
     <div className="sm:flex sm:flex-col sm:align-center p-10">
       <h2 className="text-3xl text-center leading-6 font-bold text-black">
@@ -44,7 +37,7 @@ const Plans = () => {
         className="mt-12 space-y-3 sm:mt-16 sm:space-y-0 sm:grid sm:grid-cols-3 sm:gap-6 md:max-w-7xl md:mx-auto xl:grid-cols-3"
         data-aos="zoom-in"
       >
-        {filteredPlans && filteredPlans.map((plan) => (
+        {filteredPlans && filteredPlans?.map((plan: any) => (
           <div key={plan.plan} className="border border-slate-500 rounded-lg shadow-sm divide-y divide-slate-200">
             <div className="bg-[#1d42d9]">
               <div className="p-6">
@@ -74,7 +67,7 @@ const Plans = () => {
                 What&apos;s included
               </h3>
               <ul role="list" className="mt-4 space-y-3">
-                {plan.include.map((point) => (
+                {plan?.include?.map((point: any) => (
                   <li key={point} className="flex space-x-3">
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
